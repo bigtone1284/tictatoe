@@ -1,0 +1,32 @@
+body {
+	text-align: center;
+	background: #6a5acd;
+}
+.gameboard {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 0;
+}
+.cell {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 150px;
+	height: 150px;
+	line-height: 160px;
+	width: 150px;
+}
+.center,
+.left {
+	border-right: 5px solid #000;
+}
+.center,
+.right {
+	border-left: 5px solid #000;
+}
+.top .cell,
+.middle .cell {
+	border-bottom: 5px solid #000;
+}
+.bottom .cell,
+.middle .cell {
+	border-top: 5px solid #000;
+}
