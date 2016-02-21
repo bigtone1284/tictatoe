@@ -12,4 +12,10 @@ describe('Gameboard', function () {
 			expect(gameboard.cells[0] instanceof Cell).toBe(true);
 		});
 	});
+	describe('playCell', function () {
+		it('should set the value of a given cell', function () {
+			gameboard.playCell(0, 1);
+			expect(gameboard.cells[0].value).toBe(1);
+		});
+	});
 });
