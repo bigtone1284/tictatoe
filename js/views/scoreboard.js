@@ -13,6 +13,7 @@ module.exports = Backbone.View.extend({
 	},
 	renderScore: function () {
 		'use strict';
+		// only re-renders the score amount, none of the other elements.  
 		Object.keys(this.model.changed).forEach(function(changedElement) {
 			var scoreDiv = document.getElementById(changedElement);
 			scoreDiv.innerHTML = this.model.changed[changedElement];

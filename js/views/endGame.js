@@ -1,4 +1,4 @@
-var Gameboard = require('../models/gameboard.js');
+var Gameboard = require('../models/gameboard');
 
 module.exports = Backbone.View.extend({
 	className: 'textDisplay endgame',
@@ -42,6 +42,9 @@ module.exports = Backbone.View.extend({
 	},
 	startNewGame: function () {
 		'use strict';
+		// if you choose to play again, get a new gameboard,
+		// set winner back to null
+		// and return move count to 0.
 		var gameboardModel = this.model.get('gameboard');
 		this.model.set('gameboard', new Gameboard());
 		gameboardModel.destroy();

@@ -1,5 +1,4 @@
-require("../css/style.css");
-var StartModal = require('./views/startModal.js');
+var StartModal = require('./views/startModal');
 
 $(function () {
 	'use strict';

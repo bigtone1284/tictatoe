@@ -1,4 +1,4 @@
-var CellView = require('./cell.js');
+var CellView = require('./cell');
 
 module.exports = Backbone.View.extend({
 	className: 'gameboard',
@@ -9,6 +9,7 @@ module.exports = Backbone.View.extend({
 		this.render();
 	},
 	render: function () {
+	// makes 3 rows each with three cells in them.
 		var length = this.model.cells.length,
 			gameboard = this.template(),
 			rows = $(gameboard).filter('.row'),
@@ -19,7 +20,7 @@ module.exports = Backbone.View.extend({
 			i;
 		for (i = 0; i < length; i++) {
 			row = Math.floor(i / 3);
-			posNum = (i + 3) % 3;
+			posNum = i % 3;
 			switch (posNum) {
 				case 0:
 					pos = 'left';

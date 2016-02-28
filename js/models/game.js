@@ -1,10 +1,16 @@
-var Gameboard = require('./gameboard.js');
+var Gameboard = require('./gameboard');
 
 module.exports = Backbone.Model.extend({
 	initialize: function () {
 		'use strict';
-		this.set('gameboard', new Gameboard());
-		this.set('moveCount', 0);
+		this.set({
+			gameboard: new Gameboard(),
+			moveCount: 0,
+			playerOneScore: 0,
+			playerTwoScore: 0,
+			draws: 0,
+			winner: null
+		});
 	},
 	incMoveCount: function () {
 		'use strict';
@@ -15,7 +21,8 @@ module.exports = Backbone.Model.extend({
 		'use strict';
 		var moveCount = this.get('moveCount'),
 			playerValue;
-		if ((moveCount + 2) % 2 === 0) {
+// if the movecount pre-move is even, it's players one move; else player 2.
+		if (moveCount % 2 === 0) {
 			playerValue = 1;
 		} else {
 			playerValue = -1;
@@ -29,7 +36,9 @@ module.exports = Backbone.Model.extend({
 		'use strict';
 		var moveCount = this.get('moveCount'),
 			gameboard = this.get('gameboard');
+			// if checkCell returns true there is a winner
 		if (gameboard.checkCell(cellNum)) {
+			// if the move count is now odd, player one wins; else player two.  
 			if (moveCount % 2 === 1) {
 				this.set('playerOneScore', this.get('playerOneScore') + 1);
 				this.set('winner', 1);

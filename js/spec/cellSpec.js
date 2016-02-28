@@ -1,4 +1,5 @@
-describe('Cell', function () {
+var Cell = require('../models/cell');
+module.exports = describe('Cell', function () {
 	'use strict';
 	var cell;
 

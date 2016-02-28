@@ -1,7 +1,7 @@
 body {
 	background: #9370DB;
-	text-align: center;
 	font-family: 'Arvo', serif;
+	text-align: center;
 }
 .gameboard {
 	font-family: 'Varela Round', sans-serif;
@@ -42,8 +42,8 @@ body {
 	width: 300px;
 }
 .scoreboard {
-	font-size: 24px;
 	display: table;
+	font-size: 24px;
 	margin-bottom: 10px;
 	width: 450px;
 }
@@ -102,4 +102,21 @@ input:focus {
 }
 .winner {
 	background: #F0E68C;
+}
+
+@media (max-width: 510px) {
+	.cell {
+		font-size: 100px;
+		height: 100px;
+		line-height: 110%;
+		vertical-align: middle;
+		width: 100px;
+	}
+	.scoreboard {
+		font-size: 16px;
+		width: 300px;
+	}
+	.endgame {
+		font-size: 32px;
+	}
 }

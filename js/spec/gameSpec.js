@@ -1,4 +1,6 @@
-describe('Game', function () {
+var Game = require('../models/game'),
+	Gameboard = require('../models/gameboard');
+module.exports = describe('Game', function () {
 	'use strict';
 	var game;
 	beforeEach(function () {
@@ -62,10 +64,10 @@ describe('Game', function () {
 			game.playCell(8);
 			expect(game.get('winner')).toBe('draw');
 		});
-		it('should return undefined if the game is not over', function () {
+		it('should return null if the game is not over', function () {
 			game.playCell(0);
 			game.playCell(2);
-			expect(game.get('winner')).toBe(undefined);
+			expect(game.get('winner')).toBe(null);
 		});
 	});
 });

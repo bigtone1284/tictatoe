@@ -1,4 +1,6 @@
-describe('Gameboard', function () {
+var Cell = require('../models/cell'),
+	Gameboard = require('../models/gameboard');
+module.exports = describe('Gameboard', function () {
 	'use strict';
 	var gameboard;
 	beforeEach(function () {

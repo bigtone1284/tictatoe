@@ -1,4 +1,4 @@
-var Cell = require('./cell.js');
+var Cell = require('./cell');
 
 module.exports = Backbone.Model.extend({
 	initialize: function () {
@@ -10,6 +10,7 @@ module.exports = Backbone.Model.extend({
 	},
 	playCell: function (cellNum, cellValue) {
 		'use strict';
+		// Cells will have their value set to 1 or -1 (player 1/player 2)
 		var cell = this.cells[cellNum];
 		if (cell.playable()) {
 			cell.setValue(cellValue);
@@ -22,6 +23,7 @@ module.exports = Backbone.Model.extend({
 		var subsetValue = subset.reduce(function (prevValue, cell) {
 			return prevValue + cell.getValue();
 		}, 0);
+		// A winning row/column/diagnol will have a summed value of 3 or -3
 		if (Math.abs(subsetValue) === 3) {
 			subset.forEach(function (cell) {
 				cell.set('winningCell', true);
@@ -39,7 +41,7 @@ module.exports = Backbone.Model.extend({
 	},
 	checkColumn: function (cellNum) {
 		'use strict';
-		var colNum = (cellNum + 3) % 3,
+		var colNum = cellNum % 3,
 			col = [
 				this.cells[colNum],
 				this.cells[colNum + 3],
@@ -60,13 +62,13 @@ module.exports = Backbone.Model.extend({
 				this.cells[0],
 				this.cells[4],
 				this.cells[8]
-			],
+			];
 			neDiagnol = [
 				this.cells[2],
 				this.cells[4],
 				this.cells[6]
-			],
-			seDiagnolCheck = this.checkSubSet(seDiagnol),
+			];
+			seDiagnolCheck = this.checkSubSet(seDiagnol);
 			neDiagnolCheck = this.checkSubSet(neDiagnol);
 			if (cellNum === 2 || cellNum === 6) {
 				return neDiagnolCheck;

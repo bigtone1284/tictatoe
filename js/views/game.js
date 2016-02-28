@@ -1,6 +1,6 @@
-var GameboardView = require('./gameboard.js'),
-	ScoreboardView = require('./scoreboard.js'),
-	EndGameView = require('./endGame.js');
+var GameboardView = require('./gameboard'),
+	ScoreboardView = require('./scoreboard'),
+	EndGameView = require('./endGame');
 
 module.exports = Backbone.View.extend({
 	el: '#game',

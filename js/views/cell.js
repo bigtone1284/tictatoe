@@ -18,11 +18,13 @@ module.exports = Backbone.View.extend({
 			player = 'playerTwo';
 			cellMark = 'O';
 		}
+		// the appropiate mark and style for each player.
 		this.$el.addClass(player);
 		this.$el.html(cellMark);
 	},
 	markWinner: function () {
 		'use strict';
+		// the styling for a winning row/column/diagnol
 		this.$el.addClass('winner');
 	}
 });
