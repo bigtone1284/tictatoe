@@ -1,4 +1,6 @@
-var Game = Backbone.Model.extend({
+var Gameboard = require('./gameboard.js');
+
+module.exports = Backbone.Model.extend({
 	initialize: function () {
 		'use strict';
 		this.set('gameboard', new Gameboard());

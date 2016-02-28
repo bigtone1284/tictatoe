@@ -1,4 +1,6 @@
-var GameboardView = Backbone.View.extend({
+var CellView = require('./cell.js');
+
+module.exports = Backbone.View.extend({
 	className: 'gameboard',
 	initialize: function () {
 		'use strict';

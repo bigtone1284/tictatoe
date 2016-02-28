@@ -1,4 +1,6 @@
-var Gameboard = Backbone.Model.extend({
+var Cell = require('./cell.js');
+
+module.exports = Backbone.Model.extend({
 	initialize: function () {
 		'use strict';
 		this.cells = [];

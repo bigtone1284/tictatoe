@@ -1,4 +1,4 @@
-var CellView = Backbone.View.extend({
+module.exports = Backbone.View.extend({
 	initialize: function () {
 		'use strict';
 		this.listenTo(this.model, 'change:value', this.render);

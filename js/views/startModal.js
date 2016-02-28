@@ -1,4 +1,7 @@
-var StartModal = Backbone.View.extend({
+var GameView = require('./game.js'),
+	Game = require('../models/game.js');
+
+module.exports = Backbone.View.extend({
 	el: '#startModal',
 	events: {
 		'click #startBtn': 'startGame'

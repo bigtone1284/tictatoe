@@ -1,4 +1,6 @@
-var EndGameView = Backbone.View.extend({
+var Gameboard = require('../models/gameboard.js');
+
+module.exports = Backbone.View.extend({
 	className: 'textDisplay endgame',
 	events: {
 		'click #playAgainBtn': 'startNewGame'

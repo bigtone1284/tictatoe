@@ -1,4 +1,4 @@
-var Cell = Backbone.Model.extend({
+module.exports = Backbone.Model.extend({
 	initialize: function () {
 		'use strict';
 		this.set('value', 0);

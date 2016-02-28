@@ -1,4 +1,8 @@
-var GameView = Backbone.View.extend({
+var GameboardView = require('./gameboard.js'),
+	ScoreboardView = require('./scoreboard.js'),
+	EndGameView = require('./endGame.js');
+
+module.exports = Backbone.View.extend({
 	el: '#game',
 	events: {
 		'click .cell': 'playCell',

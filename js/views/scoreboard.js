@@ -1,4 +1,4 @@
-var ScoreboardView = Backbone.View.extend({
+module.exports = Backbone.View.extend({
 	className: 'textDisplay scoreboard',
 	initialize: function () {
 		'use strict';
