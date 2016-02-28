@@ -8,30 +8,30 @@ describe('Cell', function () {
 
 	describe('initialize', function () {
 		it('should set the initial cell value to 0', function () {
-			expect(cell.value).toBe(0);
+			expect(cell.get('value')).toBe(0);
 		});
 	});
-	describe('setCell', function () {
+	describe('setValue', function () {
 		it('should set the value of a cell', function () {
-			cell.setCell(1);
-			expect(cell.value).toBe(1);
+			cell.setValue(1);
+			expect(cell.getValue('value')).toBe(1);
 		});
 	});
-	describe('getCell', function () {
-		it('should return "" if the cell has not been played yet', function () {
-			expect(cell.getCell()).toBe(0);
+	describe('getValue', function () {
+		it('should return 0 if the cell has not been played yet', function () {
+			expect(cell.getValue()).toBe(0);
 		});
 		it('should return the value of a cell', function () {
-			cell.setCell(1);
-			expect(cell.getCell()).toBe(cell.value);
+			cell.setValue(1);
+			expect(cell.getValue()).toBe(cell.getValue('value'));
 		});
 	});
 	describe('playable', function () {
-		it('should return true if the cell has not been played (setCell)', function () {
+		it('should return true if the cell has not been played (setValue)', function () {
 			expect(cell.playable()).toBe(true);
 		});
-		it('should return false if the cell has been played (setCell)', function () {
-			cell.setCell(-1);
+		it('should return false if the cell has been played (setValue)', function () {
+			cell.setValue(-1);
 			expect(cell.playable()).toBe(false);
 		});
 	});

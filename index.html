@@ -4,31 +4,48 @@
 	<meta charset="UTF-16">
 	<title>Tic Tac Toe</title>
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="gameboard" id="gameboard">
-		<div id="row0" class="top row">
-			<div id="cell0" class="left cell"></div>
-			<div id="cell1" class="center cell"></div>
-			<div id="cell2" class="right cell"></div>
-		</div>
-		<div id="row1" class="middle row">
-			<div id="cell3" class="left cell"></div>
-			<div id="cell4" class="center cell"></div>
-			<div id="cell5" class="right cell"></div>
-		</div>
-		<div id="row2" class="bottom row">
-			<div id="cell6" class="left cell"></div>
-			<div id="cell7" class="center cell"></div>
-			<div id="cell8" class="right cell"></div>
-		</div>
+	<h1>Tic Tac Toe</h1>
+	<div id="startModal" class="textDisplay">
+		<input class="playerInput"id="playerOneInput" type="text" placeholder="Player 1" maxLength="10">
+		<input class="playerInput"id="playerTwoInput" type="text" placeholder="Player 2" required maxLength="10">
+		<input id='startBtn' class='btn' type="button" value="Play">
 	</div>
+	<div id="game" class="gameContainer"></div>
+	<template id="scoreboardTemplate">
+		<div class="playerScore playerOne">{{playerOneName}}:<span id="playerOneScore">{{playerOneScore}}</span></div>
+		<div class="playerScore playerTwo">{{playerTwoName}}:<span id="playerTwoScore">{{playerTwoScore}}</span></div>
+		<div class="playerScore">Draws:<span id="draws">{{draws}}</span></div>
+	</template>
+	<template id="gameboardTemplate">
+		<div class="top row"></div>
+		<div class="middle row"></div>
+		<div class="bottom row"></div>
+	</template>
+	<template id="endGameTemplate">
+		<div>{{result}}</div>
+		<input type="button" class="btn" value="Play Again" id="playAgainBtn">
+	</template>
+	<template id="scoreTemplate">
+		{{playerScore}}
+	</template>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+
   <script type="text/javascript" src="js/models/cell.js"></script>
   <script type="text/javascript" src="js/models/gameboard.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/models/game.js"></script>
+  <script type="text/javascript" src="js/views/cell.js"></script>
+  <script type="text/javascript" src="js/views/gameboard.js"></script>
+  <script type="text/javascript" src="js/views/game.js"></script>
+  <script type="text/javascript" src="js/views/startModal.js"></script>
+  <script type="text/javascript" src="js/views/scoreboard.js"></script>
+  <script type="text/javascript" src="js/views/endGame.js"></script>
+  <script type="text/javascript" src="js/bundle.js"></script>
 </body>
 </html>

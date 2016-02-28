@@ -1,5 +1,4 @@
-var App = {} || App;
-
 $(function () {
 	'use strict';
+	new StartModal();
 });

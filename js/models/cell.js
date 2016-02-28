@@ -1,18 +1,18 @@
 var Cell = Backbone.Model.extend({
 	initialize: function () {
 		'use strict';
-		this.value = 0;
+		this.set('value', 0);
 	},
-	setCell: function (value) {
+	setValue: function (value) {
 		'use strict';
-		this.value = value;
+		this.set('value', value);
 	},
-	getCell: function () {
+	getValue: function () {
 		'use strict';
-		return this.value;
+		return this.get('value');
 	},
 	playable: function () {
 		'use strict';
-		return this.getCell() === 0;
+		return this.getValue() === 0;
 	}
 });
