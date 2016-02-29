@@ -27,6 +27,7 @@ Visit
 #### Libraries
 - Backbone.js (dependencies jQuery and Underscore.js)
 - Handlebars.js (templating)
+- Jasmine (Testing)
 
 #### Dependency Management/Build Tools
 - Webpack
