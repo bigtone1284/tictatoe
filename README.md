@@ -18,7 +18,9 @@ Then
 `webpack-server-dev`
 
 Finally
-Visit 'localhost:8080' (or localhost:8080/specRunner.html for tests).
+Visit
+`localhost:8080`
+(or `localhost:8080/specRunner.html` for tests).
 
 ## Tools used
 
