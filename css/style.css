@@ -103,13 +103,10 @@ input:focus {
 .winner {
 	background: #F0E68C;
 }
-
 @media (max-width: 510px) {
 	.cell {
 		font-size: 100px;
 		height: 100px;
-		line-height: 110%;
-		vertical-align: middle;
 		width: 100px;
 	}
 	.scoreboard {
@@ -118,5 +115,22 @@ input:focus {
 	}
 	.endgame {
 		font-size: 32px;
+	}
+}
+@media (max-width: 350px) {
+	.cell {
+		font-size: 90px;
+		height: 90px;
+		width: 90px;
+	}
+	.scoreboard {
+		width: 275px;
+	}
+	.endgame {
+		font-size: 24px;
+		bottom: 300px;
+	}
+	.textDisplay {
+		width: 275px;
 	}
 }

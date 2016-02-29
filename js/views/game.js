@@ -17,8 +17,7 @@ module.exports = Backbone.View.extend({
 		'use strict';
 		var gameboard = new GameboardView({model: this.model.get('gameboard')}),
 			scoreboard = new ScoreboardView({model: this.model});
-		this.$el.append(scoreboard.$el);
-		this.$el.append(gameboard.$el);
+		this.$el.append(scoreboard.$el, gameboard.$el);
 	},
 	renderEndGame: function () {
 		'use strict';

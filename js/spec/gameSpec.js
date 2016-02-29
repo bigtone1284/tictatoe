@@ -1,11 +1,14 @@
 var Game = require('../models/game'),
 	Gameboard = require('../models/gameboard');
+
 module.exports = describe('Game', function () {
 	'use strict';
 	var game;
+
 	beforeEach(function () {
 		game = new Game();
 	});
+	
 	describe('initialize', function () {
 		it('should start with a gameboard', function () {
 			expect(game.get('gameboard') instanceof Gameboard).toBe(true);
