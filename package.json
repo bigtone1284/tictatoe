@@ -1,0 +1,26 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "tictactoe built with backbone.js",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigtone1284/tictatoe.git"
+  },
+  "author": "Tony DeFreitas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigtone1284/tictatoe/issues"
+  },
+  "homepage": "https://github.com/bigtone1284/tictatoe#readme"
+}

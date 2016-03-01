@@ -14,8 +14,11 @@ Tic-Tac-Toe
 First
 `git clone git@github.com:bigtone1284/tictatoe.git`
 
+Next
+`npm install`
+
 Then
-`webpack-server-dev`
+`npm start`
 
 Finally
 Visit
@@ -31,3 +34,5 @@ Visit
 
 #### Dependency Management/Build Tools
 - Webpack
+- Webpack-Dev-Server
+- NPM
