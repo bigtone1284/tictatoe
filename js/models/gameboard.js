@@ -70,15 +70,7 @@ module.exports = Backbone.Model.extend({
 			];
 			seDiagnolCheck = this.checkSubSet(seDiagnol);
 			neDiagnolCheck = this.checkSubSet(neDiagnol);
-			if (cellNum === 2 || cellNum === 6) {
-				return neDiagnolCheck;
-			}
-			if (cellNum === 0 || cellNum === 8) {
-				return seDiagnolCheck;
-			}
-			if (cellNum === 4) {
-				return neDiagnolCheck || seDiagnolCheck;
-			}
+			return neDiagnolCheck || seDiagnolCheck;
 		}
 	},
 	checkCell: function (cellNum) {
