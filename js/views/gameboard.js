@@ -13,36 +13,25 @@ module.exports = Backbone.View.extend({
 		var length = this.model.cells.length,
 			gameboard = this.template(),
 			rows = $(gameboard).filter('.row'),
+			posArr = ['left', 'center', 'right'],
 			row,
 			posNum,
 			pos,
-			cell,
+			cellView,
 			i;
-		for (i = 0; i < length; i++) {
-			row = Math.floor(i / 3);
-			posNum = i % 3;
-			switch (posNum) {
-				case 0:
-					pos = 'left';
-					break;
-				case 1:
-					pos = 'center';
-					break;
-				case 2:
-					pos = 'right';
-					break;
-				default:
-					break;
-			}
-			cell = new CellView({
-				model: this.model.cells[i],
+		_.each(this.model.cells, function (cell, index) {
+			row = Math.floor(index / 3);
+			posNum = index % 3;
+			pos = posArr[posNum];
+			cellView = new CellView({
+				model: cell,
 				className: pos + ' cell',
 				attributes: {
-					'data-cellNum': i
+					'data-cellNum': index
 				}
 			});
-			rows.eq(row).append(cell.$el);
-		}
+			rows.eq(row).append(cellView.$el);
+		});
 		this.$el.append(rows);
 	}
 });
