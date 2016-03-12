@@ -11,7 +11,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "webpack-dev-server port --3000"
+    "devStart": "webpack-dev-server",
+    "start": "webpack"
   },
   "repository": {
     "type": "git",
