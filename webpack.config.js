@@ -1,7 +1,7 @@
 module.exports = {
   entry: {
-		app: "./js/app.js",
-		test: "./js/spec/specRunner.js"
+		app: "./public/js/app.js",
+		test: "./public/js/spec/specRunner.js"
   },
   output: {
     path: __dirname,
