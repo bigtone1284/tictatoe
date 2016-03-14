@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "devStart": "webpack-dev-server",
-    "bundle": "webpack webpack.config.js",
+    "prestart": "webpack webpack.config.js",
     "start": "node server.js"
   },
   "repository": {
