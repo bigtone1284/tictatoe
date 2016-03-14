@@ -5,7 +5,7 @@ module.exports = {
   },
   output: {
     path: __dirname,
-    filename: 'js/[name]Bundle.js'
+    filename: '.publc/js/[name]Bundle.js'
   },
   module: {
     loaders: [
